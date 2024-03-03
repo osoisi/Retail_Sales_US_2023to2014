@@ -1,0 +1,93 @@
+{
+  "config": "{\"version\":\"5.51\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU02\",\"version\":\"5.51\",\"type\":2},\"customTheme\":{\"name\":\"Innovate\",\"version\":\"5.51\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU02",
+            "path": "BaseThemes/CY24SU02.json",
+            "type": 202
+          },
+          {
+            "name": "Innovate",
+            "path": "BuiltInThemes/Innovate.json",
+            "type": 201
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"2f2fbd3c7480eef3666a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":350.1519756838906,\"y\":0,\"z\":1004,\"width\":659.452887537994,\"height\":62.24924012158055,\"tabOrder\":1004}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"US Retail Sales Report for 2014 to 2023\",\"textStyle\":{\"fontFamily\":\"Segoe UI\",\"fontSize\":\"24pt\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}}}",
+          "filters": "[]",
+          "height": 62.25,
+          "width": 659.45,
+          "x": 350.15,
+          "y": 0.00,
+          "z": 1004.00
+        },
+        {
+          "config": "{\"name\":\"7652729e1370730b5548\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":83.64741641337386,\"z\":1001,\"width\":339.45288753799394,\"height\":96.29179331306992,\"tabOrder\":1001}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"code_industry.Industry\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"code_industry\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Industry\"},\"Name\":\"code_industry.Industry\",\"NativeReferenceName\":\"Select One or More Industries\"}]},\"columnProperties\":{\"code_industry.Industry\":{\"displayName\":\"Select One or More Industries\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"items\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"8D\"}}}}}],\"selection\":[{\"properties\":{\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 96.29,
+          "width": 339.45,
+          "x": 0.00,
+          "y": 83.65,
+          "z": 1001.00
+        },
+        {
+          "config": "{\"name\":\"b1d04ba47509963652d1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":371.5501519756839,\"y\":83.64741641337386,\"z\":0,\"width\":908.4498480243161,\"height\":276.23100303951367,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"view_retaildata_december2023_fixed.Year\",\"active\":true},{\"queryRef\":\"industry_group_codes.Industry_Group\"}],\"Values\":[{\"queryRef\":\"Sum(view_retaildata_december2023_fixed.January)\"},{\"queryRef\":\"Sum(view_retaildata_december2023_fixed.February)\"},{\"queryRef\":\"Sum(view_retaildata_december2023_fixed.March Sales)\"},{\"queryRef\":\"Sum(view_retaildata_december2023_fixed.April)\"},{\"queryRef\":\"Sum(view_retaildata_december2023_fixed.May Sales)\"},{\"queryRef\":\"Sum(view_retaildata_december2023_fixed.June)\"},{\"queryRef\":\"Sum(view_retaildata_december2023_fixed.July Sales)\"},{\"queryRef\":\"Sum(view_retaildata_december2023_fixed.August Sales)\"},{\"queryRef\":\"Sum(view_retaildata_december2023_fixed.September Sales)\"},{\"queryRef\":\"Sum(view_retaildata_december2023_fixed.October Sales)\"},{\"queryRef\":\"Sum(view_retaildata_december2023_fixed.November Sales)\"},{\"queryRef\":\"Sum(view_retaildata_december2023_fixed.December)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"view_retaildata_december2023_fixed\",\"Type\":0},{\"Name\":\"i\",\"Entity\":\"industry_group_codes\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Year\"},\"Name\":\"view_retaildata_december2023_fixed.Year\",\"NativeReferenceName\":\"Year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"January Sales\"}},\"Function\":0},\"Name\":\"Sum(view_retaildata_december2023_fixed.January)\",\"NativeReferenceName\":\"Sum of January Sales\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"February Sales\"}},\"Function\":0},\"Name\":\"Sum(view_retaildata_december2023_fixed.February)\",\"NativeReferenceName\":\"Sum of February Sales\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"i\"}},\"Property\":\"Industry_Group\"},\"Name\":\"industry_group_codes.Industry_Group\",\"NativeReferenceName\":\"Industry_Group\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"March Sales\"}},\"Function\":0},\"Name\":\"Sum(view_retaildata_december2023_fixed.March Sales)\",\"NativeReferenceName\":\"Sum of March Sales\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"April Sales\"}},\"Function\":0},\"Name\":\"Sum(view_retaildata_december2023_fixed.April)\",\"NativeReferenceName\":\"Sum of April Sales\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"May Sales\"}},\"Function\":0},\"Name\":\"Sum(view_retaildata_december2023_fixed.May Sales)\",\"NativeReferenceName\":\"Sum of May Sales\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"June Sales\"}},\"Function\":0},\"Name\":\"Sum(view_retaildata_december2023_fixed.June)\",\"NativeReferenceName\":\"Sum of June Sales\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"July Sales\"}},\"Function\":0},\"Name\":\"Sum(view_retaildata_december2023_fixed.July Sales)\",\"NativeReferenceName\":\"Sum of July Sales\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"August Sales\"}},\"Function\":0},\"Name\":\"Sum(view_retaildata_december2023_fixed.August Sales)\",\"NativeReferenceName\":\"Sum of August Sales\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"September Sales\"}},\"Function\":0},\"Name\":\"Sum(view_retaildata_december2023_fixed.September Sales)\",\"NativeReferenceName\":\"Sum of September Sales\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"October Sales\"}},\"Function\":0},\"Name\":\"Sum(view_retaildata_december2023_fixed.October Sales)\",\"NativeReferenceName\":\"Sum of October Sales\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"November Sales\"}},\"Function\":0},\"Name\":\"Sum(view_retaildata_december2023_fixed.November Sales)\",\"NativeReferenceName\":\"Sum of November Sales\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"December Sales\"}},\"Function\":0},\"Name\":\"Sum(view_retaildata_december2023_fixed.December)\",\"NativeReferenceName\":\"Sum of December Sales\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"September Sales\"}},\"Function\":0}}}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"view_retaildata_december2023_fixed.Year\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"view_retaildata_december2023_fixed\"}},\"Property\":\"Year\"}}],\"isPinned\":true},{\"queryRefs\":[\"industry_group_codes.Industry_Group\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null}}],\"drillFilterOtherVisuals\":true,\"objects\":{\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"60.05776153114783D\"}}}},\"selector\":{\"metadata\":\"Sum(view_retaildata_december2023_fixed.January)\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"61.25442660037992D\"}}}},\"selector\":{\"metadata\":\"Sum(view_retaildata_december2023_fixed.February)\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"62.7964521851197D\"}}}},\"selector\":{\"metadata\":\"Sum(view_retaildata_december2023_fixed.March Sales)\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"61.56373528547609D\"}}}},\"selector\":{\"metadata\":\"Sum(view_retaildata_december2023_fixed.April)\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"62.395105876991636D\"}}}},\"selector\":{\"metadata\":\"Sum(view_retaildata_december2023_fixed.May Sales)\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"63.55968642856499D\"}}}},\"selector\":{\"metadata\":\"Sum(view_retaildata_december2023_fixed.June)\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"61.41447283278151D\"}}}},\"selector\":{\"metadata\":\"Sum(view_retaildata_december2023_fixed.July Sales)\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"62.84967923820801D\"}}}},\"selector\":{\"metadata\":\"Sum(view_retaildata_december2023_fixed.August Sales)\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"71.32013698242778D\"}}}},\"selector\":{\"metadata\":\"Sum(view_retaildata_december2023_fixed.September Sales)\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"62.119598192923135D\"}}}},\"selector\":{\"metadata\":\"Sum(view_retaildata_december2023_fixed.October Sales)\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"69.33755550854627D\"}}}},\"selector\":{\"metadata\":\"Sum(view_retaildata_december2023_fixed.November Sales)\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"69.2699095159121D\"}}}},\"selector\":{\"metadata\":\"Sum(view_retaildata_december2023_fixed.December)\"}}],\"values\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"8D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Trebuchet MS'''\"}}}}}],\"columnHeaders\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 276.23,
+          "width": 908.45,
+          "x": 371.55,
+          "y": 83.65,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"b66fabd41500c5f6643b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":891,\"y\":360,\"width\":389,\"height\":346,\"z\":1003,\"tabOrder\":1003}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"view_retaildata_december2023_fixed.Year\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(view_retaildata_december2023_fixed.Total_sales)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"view_retaildata_december2023_fixed\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Year\"},\"Name\":\"view_retaildata_december2023_fixed.Year\",\"NativeReferenceName\":\"Year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Total Retail Sales\"}},\"Function\":0},\"Name\":\"Sum(view_retaildata_december2023_fixed.Total_sales)\",\"NativeReferenceName\":\"Sum of Total Retail Sales\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Total Retail Sales\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"axisType\":{\"expr\":{\"Literal\":{\"Value\":\"'Categorical'\"}}},\"concatenateLabels\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"logAxisScale\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"invertAxis\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 346.00,
+          "width": 389.00,
+          "x": 891.00,
+          "y": 360.00,
+          "z": 1003.00
+        },
+        {
+          "config": "{\"name\":\"c1f5e36bb0e7932b075c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":373.4954407294833,\"y\":359.87841945288756,\"z\":1000,\"width\":518.419452887538,\"height\":346.26139817629183,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Category\":[{\"queryRef\":\"december2023projections.Industry_Group\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(view_retaildata_december2023_fixed.Total_sales)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"december2023projections\",\"Type\":0},{\"Name\":\"v\",\"Entity\":\"view_retaildata_december2023_fixed\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Industry_Group\"},\"Name\":\"december2023projections.Industry_Group\",\"NativeReferenceName\":\"Industry_Group\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Total Retail Sales\"}},\"Function\":0},\"Name\":\"Sum(view_retaildata_december2023_fixed.Total_sales)\",\"NativeReferenceName\":\"Sum of Total Retail Sales\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Total Retail Sales\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"slices\":[{\"properties\":{\"startAngle\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}}}}],\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"labelStyle\":{\"expr\":{\"Literal\":{\"Value\":\"'Category, data value, percent of total'\"}}},\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'outside'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 346.26,
+          "width": 518.42,
+          "x": 373.50,
+          "y": 359.88,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"cfd8ea01317c82866389\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":179.93920972644378,\"z\":1002,\"width\":363.76899696048633,\"height\":538.8449848024317,\"tabOrder\":1002}}],\"singleVisual\":{\"visualType\":\"multiRowCard\",\"projections\":{\"Values\":[{\"queryRef\":\"code_industry.Industry\"},{\"queryRef\":\"Sum(view_retaildata_december2023_fixed.Total_sales)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"view_retaildata_december2023_fixed\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"code_industry\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Industry\"},\"Name\":\"code_industry.Industry\",\"NativeReferenceName\":\"Industry\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Total Retail Sales\"}},\"Function\":0},\"Name\":\"Sum(view_retaildata_december2023_fixed.Total_sales)\",\"NativeReferenceName\":\"Sum of Total Retail Sales\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Total Retail Sales\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataLabels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}}}],\"categoryLabels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"cardTitle\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 538.84,
+          "width": 363.77,
+          "x": 0.00,
+          "y": 179.94,
+          "z": 1002.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ],
+  "theme": "Innovate"
+}

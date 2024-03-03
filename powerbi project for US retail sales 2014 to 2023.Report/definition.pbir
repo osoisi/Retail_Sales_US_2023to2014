@@ -1,0 +1,9 @@
+{
+  "version": "1.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../powerbi project for US retail sales 2014 to 2023.Dataset"
+    },
+    "byConnection": null
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 200.0876951021632,
+            "y": 522.58659711495875
+          },
+          "nodeIndex": "code_industry",
+          "nodeLineageTag": "07e273ca-f077-4434-8bc2-a4703c2dd03c",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 471.87534061873839,
+            "y": 344.77955600162011
+          },
+          "nodeIndex": "industry_group_codes",
+          "nodeLineageTag": "a044b346-a742-41e8-bfef-d33ba0e8c4b0",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 15.909349509395639
+          },
+          "nodeIndex": "view_industry_groupings",
+          "nodeLineageTag": "739ef4e7-a678-434f-a894-b44265f56675",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 305.07697027841567,
+            "y": -10
+          },
+          "nodeIndex": "view_retailsales_main",
+          "nodeLineageTag": "8f35c418-3679-4b37-904f-475e618c418e",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 745.87534061873839,
+            "y": 173.79329855747937
+          },
+          "nodeIndex": "december2023projections",
+          "nodeLineageTag": "f4127fd4-86d3-48fd-8789-dfcbef43ccd0",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1238.6253406187384,
+            "y": 54.043298557479375
+          },
+          "nodeIndex": "view_retaildata_december2023_fixed",
+          "nodeLineageTag": "609e49d3-2391-4540-80d3-8bd3cc02b1d8",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 80,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

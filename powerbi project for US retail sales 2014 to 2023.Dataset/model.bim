@@ -1,0 +1,1523 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"code_industry\",\"industry_group_codes\",\"view_industry_groupings\",\"view_retailsales_main\",\"december2023projections\",\"view_retaildata_december2023_fixed\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.126.927.0 (24.02)"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-GB",
+    "cultures": [
+      {
+        "name": "en-GB",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "408c0f4d-c4a4-4daf-84c5-638615be3bd4",
+        "fromColumn": "Industry",
+        "fromTable": "view_industry_groupings",
+        "toColumn": "Industry",
+        "toTable": "code_industry"
+      },
+      {
+        "name": "57912c8d-466a-4b4b-b3d6-ffbfbc624f5b",
+        "fromColumn": "Industry",
+        "fromTable": "view_retailsales_main",
+        "toColumn": "Industry",
+        "toTable": "code_industry"
+      },
+      {
+        "name": "bf4ba38f-857d-45c4-801b-24edc5911755",
+        "fromColumn": "CodeN",
+        "fromTable": "code_industry",
+        "toColumn": "CodeN",
+        "toTable": "industry_group_codes"
+      },
+      {
+        "name": "781ee27e-5f56-4648-9e4f-5f66334cb5c1",
+        "fromColumn": "CodeN",
+        "fromTable": "view_industry_groupings",
+        "isActive": false,
+        "toColumn": "CodeN",
+        "toTable": "industry_group_codes"
+      },
+      {
+        "name": "b0b3d699-8511-4c7e-9210-24ee5633bfb4",
+        "fromColumn": "CodeN",
+        "fromTable": "view_retailsales_main",
+        "isActive": false,
+        "toColumn": "CodeN",
+        "toTable": "industry_group_codes"
+      },
+      {
+        "name": "8fa5481a-2437-4d03-8d01-9e66ee366bc6",
+        "crossFilteringBehavior": "bothDirections",
+        "fromCardinality": "one",
+        "fromColumn": "February",
+        "fromTable": "view_retailsales_main",
+        "isActive": false,
+        "toColumn": "February",
+        "toTable": "view_industry_groupings"
+      },
+      {
+        "name": "38d84355-0713-4bf7-8cf9-8e047cdf31da",
+        "fromColumn": "CodeN",
+        "fromTable": "december2023projections",
+        "isActive": false,
+        "toColumn": "CodeN",
+        "toTable": "industry_group_codes"
+      },
+      {
+        "name": "c435b8bd-235e-4625-bc33-256f4ddc6768",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "CodeN",
+        "fromTable": "december2023projections",
+        "isActive": false,
+        "toCardinality": "many",
+        "toColumn": "CodeN",
+        "toTable": "view_retailsales_main"
+      },
+      {
+        "name": "9d4dd2b2-d338-479f-95ac-954ffadd8534",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "CodeN",
+        "fromTable": "december2023projections",
+        "isActive": false,
+        "toCardinality": "many",
+        "toColumn": "CodeN",
+        "toTable": "view_industry_groupings"
+      },
+      {
+        "name": "5a505140-8288-4bf9-ba00-c6b95abd6e52",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "CodeN",
+        "fromTable": "december2023projections",
+        "toCardinality": "many",
+        "toColumn": "CodeN",
+        "toTable": "code_industry"
+      },
+      {
+        "name": "5482cf2e-6e94-44a7-9337-e323bfe50e8e",
+        "fromColumn": "CodeN",
+        "fromTable": "view_retaildata_december2023_fixed",
+        "isActive": false,
+        "toColumn": "CodeN",
+        "toTable": "industry_group_codes"
+      },
+      {
+        "name": "31717d97-7041-4fe1-b637-2d0b15cf2de7",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "CodeN",
+        "fromTable": "view_retaildata_december2023_fixed",
+        "isActive": false,
+        "toCardinality": "many",
+        "toColumn": "CodeN",
+        "toTable": "december2023projections"
+      },
+      {
+        "name": "8e39fe29-439c-4e7a-a98f-41550641b29e",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "CodeN",
+        "fromTable": "view_retaildata_december2023_fixed",
+        "toCardinality": "many",
+        "toColumn": "CodeN",
+        "toTable": "code_industry"
+      }
+    ],
+    "sourceQueryCulture": "en-GB",
+    "tables": [
+      {
+        "name": "code_industry",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Industry",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e1d65926-697d-4f3d-896f-949d8a4bc947",
+            "sourceColumn": "Industry",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CodeN",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "4e518d5f-f24c-45ed-93a2-8748b4c4c7f6",
+            "sourceColumn": "CodeN",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "07e273ca-f077-4434-8bc2-a4703c2dd03c",
+        "partitions": [
+          {
+            "name": "code_industry",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Databases(\"localhost\\SQLEXPRESS\"),",
+                "    db_us_retailsales_2014to2023 = Source{[Name=\"db_us_retailsales_2014to2023\"]}[Data],",
+                "    dbo_code_industry = db_us_retailsales_2014to2023{[Schema=\"dbo\",Item=\"code_industry\"]}[Data]",
+                "in",
+                "    dbo_code_industry"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DateTableTemplate_51252d75-3b6d-41d0-b1ce-71fb4eb54327",
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "b158f80a-df9a-49ee-8ae2-670732605e1f",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "7d05700f-2486-405e-b495-ca3b6b1b9428",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "cbc5da16-b585-4b74-a460-91c49b25c561",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "e8f909cb-6bba-409a-afe5-4c1fca3591c4",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "8a5b75e2-b532-4362-b69e-db08d5a48a96",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "413e9143-bc6b-4a3b-b817-2a85a8ea86f4",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "64589cb2-579c-4754-87d2-fde80d2d3ab4",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "ba438b1f-5c4f-4c98-bf98-a8ab34d511ee",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "a7bc8763-f9e5-4f7d-9d40-ca6715e94beb",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "5f348d93-6e29-4005-ab2c-2304bd0aec3e",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "3704737a-2453-4bda-827b-4f0091415fef",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "e5d59739-b902-43c1-8172-2d6094427020"
+          }
+        ],
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "f530846b-e4c5-46a5-9a11-05d09306a09c",
+        "partitions": [
+          {
+            "name": "DateTableTemplate_51252d75-3b6d-41d0-b1ce-71fb4eb54327",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "industry_group_codes",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Industry_Group",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fe12a94f-4e98-4cbd-90e0-dbd683d43e2c",
+            "sourceColumn": "Industry_Group",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CodeN",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "01821fc6-67af-4a90-9430-589d6075a64a",
+            "sourceColumn": "CodeN",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "a044b346-a742-41e8-bfef-d33ba0e8c4b0",
+        "partitions": [
+          {
+            "name": "industry_group_codes",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Databases(\"localhost\\SQLEXPRESS\"),",
+                "    db_us_retailsales_2014to2023 = Source{[Name=\"db_us_retailsales_2014to2023\"]}[Data],",
+                "    dbo_industry_group_codes = db_us_retailsales_2014to2023{[Schema=\"dbo\",Item=\"industry_group_codes\"]}[Data],",
+                "    #\"Replaced Value\" = Table.ReplaceValue(dbo_industry_group_codes,\"Car\",\"Car Related\",Replacer.ReplaceText,{\"Industry_Group\"}),",
+                "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Replaced Value\",\"Home\",\"Home Products\",Replacer.ReplaceText,{\"Industry_Group\"}),",
+                "    #\"Replaced Value2\" = Table.ReplaceValue(#\"Replaced Value1\",\"Mix\",\"Mixed\",Replacer.ReplaceText,{\"Industry_Group\"}),",
+                "    #\"Replaced Value3\" = Table.ReplaceValue(#\"Replaced Value2\",\"Hobby\",\"Hobbies\",Replacer.ReplaceText,{\"Industry_Group\"})",
+                "in",
+                "    #\"Replaced Value3\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "view_industry_groupings",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "changedProperties": [
+          {
+            "property": "IsHidden"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "cc8a23e8-6dde-4fbb-b526-1e4ceb465c39",
+            "sourceColumn": "Year",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "CodeN",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "double",
+            "isHidden": true,
+            "lineageTag": "9f2ab68e-69bc-470b-b75d-50e3c57ae288",
+            "sourceColumn": "CodeN",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Industry",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "94592db6-4e59-4b8e-a8cc-46eda8cdc444",
+            "sourceColumn": "Industry",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Industry_Group",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "53a24410-b6c8-4099-98c7-4c7fa7d94c51",
+            "sourceColumn": "Industry_Group",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "January",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "#,0",
+            "isHidden": true,
+            "lineageTag": "b920ad7f-c54b-4254-9ac1-f440c11a292c",
+            "sourceColumn": "January",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "February",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "#,0",
+            "isHidden": true,
+            "lineageTag": "30b063e4-7042-4738-ab96-a085b271c3ba",
+            "sourceColumn": "February",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "March",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "#,0",
+            "isHidden": true,
+            "lineageTag": "512e1c99-d60c-467e-821b-20672d0a58ab",
+            "sourceColumn": "March",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "April",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "#,0",
+            "isHidden": true,
+            "lineageTag": "f02afaf6-ef44-4b61-8308-d41f7c91d060",
+            "sourceColumn": "April",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "May",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "#,0",
+            "isHidden": true,
+            "lineageTag": "d884fac1-f86a-48d9-9161-9e01ba8ba791",
+            "sourceColumn": "May",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "June",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "#,0",
+            "isHidden": true,
+            "lineageTag": "0a21b7df-2e1b-44f2-9ead-fbe57b37e625",
+            "sourceColumn": "June",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "July",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "#,0",
+            "isHidden": true,
+            "lineageTag": "f98e92b1-71ad-4848-86da-61b663ef441d",
+            "sourceColumn": "July",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "August",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "#,0",
+            "isHidden": true,
+            "lineageTag": "21e35ab5-47ff-49f0-b711-1155e80752bb",
+            "sourceColumn": "August",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "September",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "#,0",
+            "isHidden": true,
+            "lineageTag": "fd28bc9d-bd12-4553-bc8b-55cfd1311fa4",
+            "sourceColumn": "September",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "October",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "#,0",
+            "isHidden": true,
+            "lineageTag": "f6835284-7fd5-4b39-a851-00d9f7d0f93e",
+            "sourceColumn": "October",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "November",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "#,0",
+            "isHidden": true,
+            "lineageTag": "e74972bf-a310-4ca2-a859-37e103a10855",
+            "sourceColumn": "November",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "December",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "#,0",
+            "isHidden": true,
+            "lineageTag": "dddd4fac-d23e-44b9-a1d1-a4531178cd67",
+            "sourceColumn": "December",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "expression": "view_industry_groupings[January]+view_industry_groupings[February]+view_industry_groupings[March]+view_industry_groupings[April]+view_industry_groupings[May]+view_industry_groupings[June]+view_industry_groupings[July]+view_industry_groupings[August]+view_industry_groupings[September]+view_industry_groupings[October]+view_industry_groupings[November]+view_industry_groupings[December]",
+            "formatString": "#,0",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "2429dcf1-2a06-45f0-ad2b-025603428c0c",
+            "summarizeBy": "sum",
+            "type": "calculated"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "739ef4e7-a678-434f-a894-b44265f56675",
+        "partitions": [
+          {
+            "name": "view_industry_groupings",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Databases(\"localhost\\SQLEXPRESS\"),",
+                "    db_us_retailsales_2014to2023 = Source{[Name=\"db_us_retailsales_2014to2023\"]}[Data],",
+                "    dbo_view_industry_groupings = db_us_retailsales_2014to2023{[Schema=\"dbo\",Item=\"view_industry_groupings\"]}[Data],",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(dbo_view_industry_groupings,{{\"January\", Int64.Type}, {\"February\", Int64.Type}, {\"March\", Int64.Type}, {\"April\", Int64.Type}, {\"May\", Int64.Type}, {\"June\", Int64.Type}, {\"July\", Int64.Type}, {\"August\", Int64.Type}, {\"September\", Int64.Type}, {\"October\", Int64.Type}, {\"November\", Int64.Type}, {\"December\", Int64.Type}}),",
+                "    #\"Replaced Value\" = Table.ReplaceValue(#\"Changed Type\",\"Car\",\"Car Related\",Replacer.ReplaceText,{\"Industry_Group\"}),",
+                "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Replaced Value\",\"Home\",\"Home Products\",Replacer.ReplaceText,{\"Industry_Group\"}),",
+                "    #\"Replaced Value2\" = Table.ReplaceValue(#\"Replaced Value1\",\"Mix\",\"Mixed\",Replacer.ReplaceText,{\"Industry_Group\"}),",
+                "    #\"Replaced Value3\" = Table.ReplaceValue(#\"Replaced Value2\",\"Hobby\",\"Hobbies\",Replacer.ReplaceText,{\"Industry_Group\"})",
+                "in",
+                "    #\"Replaced Value3\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "view_retailsales_main",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "ad0be66c-250e-4b2f-97f6-a26bcd32a5fe",
+            "sourceColumn": "Year",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "CodeN",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "17d3545d-a62e-46a4-b686-0aca6cab6a31",
+            "sourceColumn": "CodeN",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Industry",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7e17446f-b4a2-49bc-a127-8723683e275a",
+            "sourceColumn": "Industry",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "January",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "11d8158c-9c91-417c-afa9-977f4a50d80c",
+            "sourceColumn": "January",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "February",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "e3821454-1cd5-4cd1-ab20-1befe67a38dc",
+            "sourceColumn": "February",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "March",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "c9d9139e-23f2-46a0-b178-5611cf12f811",
+            "sourceColumn": "March",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "April",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "62d06aa7-02e2-4acc-bc30-8f0e9a8652a2",
+            "sourceColumn": "April",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "May",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "4ec93255-183c-4b05-bf19-3ea75a72d80a",
+            "sourceColumn": "May",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "June",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "e1e1d4d1-a1fa-48e2-ab29-2e403f0964b7",
+            "sourceColumn": "June",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "July",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "9544629b-cd00-413b-8861-81e80be71b47",
+            "sourceColumn": "July",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "August",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "feefa94c-dbdd-4873-806e-80d8871ca7cd",
+            "sourceColumn": "August",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "September",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "28545dd1-8e88-4a56-9260-650453a77881",
+            "sourceColumn": "September",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "October",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "fbdd360d-179d-452d-be11-a5feeaa60bed",
+            "sourceColumn": "October",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "November",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "b24bb8bc-b159-4ec7-befa-7cf2e9d5c47c",
+            "sourceColumn": "November",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "December",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "11705848-a1ba-4b6e-8c05-ca423bed6d59",
+            "sourceColumn": "December",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "8f35c418-3679-4b37-904f-475e618c418e",
+        "partitions": [
+          {
+            "name": "view_retailsales_main",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Databases(\"localhost\\SQLEXPRESS\"),",
+                "    db_us_retailsales_2014to2023 = Source{[Name=\"db_us_retailsales_2014to2023\"]}[Data],",
+                "    dbo_view_retailsales_main = db_us_retailsales_2014to2023{[Schema=\"dbo\",Item=\"view_retailsales_main\"]}[Data],",
+                "    #\"Replaced Value\" = Table.ReplaceValue(dbo_view_retailsales_main,\",\",\"\",Replacer.ReplaceText,{\"December\"}),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Replaced Value\",{{\"December\", Int64.Type}, {\"November\", Int64.Type}, {\"January\", Int64.Type}, {\"February\", Int64.Type}, {\"March\", Int64.Type}, {\"April\", Int64.Type}, {\"May\", Int64.Type}, {\"June\", Int64.Type}, {\"July\", Int64.Type}, {\"August\", Int64.Type}, {\"September\", Int64.Type}, {\"October\", Int64.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "december2023projections",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "0c031b9f-eac9-43f0-b89f-ef5e2bcf260b",
+            "sourceColumn": "Year",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "CodeN",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "9eb441f1-2a79-4b74-923f-3e424dcd19c2",
+            "sourceColumn": "CodeN",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Industry",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ded0acc2-99d9-4961-8fac-14815a05d486",
+            "sourceColumn": "Industry",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Industry_Group",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "cdf7fd04-4613-47f4-81e9-d6812c594f89",
+            "sourceColumn": "Industry_Group",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "December",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "86c35372-2f3d-4901-b754-95ce5bfb5d3e",
+            "sourceColumn": "December",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "f4127fd4-86d3-48fd-8789-dfcbef43ccd0",
+        "partitions": [
+          {
+            "name": "december2023projections",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Databases(\"localhost\\SQLEXPRESS\"),",
+                "    db_us_retailsales_2014to2023 = Source{[Name=\"db_us_retailsales_2014to2023\"]}[Data],",
+                "    dbo_december2023projections = db_us_retailsales_2014to2023{[Schema=\"dbo\",Item=\"december2023projections\"]}[Data],",
+                "    #\"Replaced Value\" = Table.ReplaceValue(dbo_december2023projections,\"Car\",\"Car Related\",Replacer.ReplaceText,{\"Industry_Group\"}),",
+                "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Replaced Value\",\"Home\",\"Home Products\",Replacer.ReplaceText,{\"Industry_Group\"}),",
+                "    #\"Replaced Value2\" = Table.ReplaceValue(#\"Replaced Value1\",\"Mix\",\"Mixed\",Replacer.ReplaceText,{\"Industry_Group\"}),",
+                "    #\"Replaced Value3\" = Table.ReplaceValue(#\"Replaced Value2\",\"Hobby\",\"Hobbies\",Replacer.ReplaceText,{\"Industry_Group\"})",
+                "in",
+                "    #\"Replaced Value3\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "view_retaildata_december2023_fixed",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "2dc3a7c0-1b07-49be-abaa-a881be8dc52d",
+            "sourceColumn": "Year",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "CodeN",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "0a9e1a11-289b-4e9c-a432-cdf4a2a5fa30",
+            "sourceColumn": "CodeN",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Industry",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0461601d-7441-4751-90c1-a3c6f494c933",
+            "sourceColumn": "Industry",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Industry_Group",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "169a6a33-9152-430b-8039-70417d6c3a2a",
+            "sourceColumn": "Industry_Group",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "January Sales",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "001e4abe-86f1-41ce-95fb-b9fcbb4b1997",
+            "sourceColumn": "January Sales",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "February Sales",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "331ce690-8d89-4bcb-9436-33a453efd939",
+            "sourceColumn": "February Sales",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "March Sales",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "5676509a-e2b4-492b-bbe4-fe2adea80be9",
+            "sourceColumn": "March Sales",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "April Sales",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "a4cf7b18-87a3-48a6-9618-10e45a94bd4a",
+            "sourceColumn": "April Sales",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "May Sales",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "77bcfb5e-d152-4bb3-b14b-9fe49e55c1ab",
+            "sourceColumn": "May Sales",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "June Sales",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "852ddf7c-da64-4849-9047-f974bc891404",
+            "sourceColumn": "June Sales",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "July Sales",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "4e7e29fa-937f-426e-87a9-cf13eef16053",
+            "sourceColumn": "July Sales",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "August Sales",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "272e8bee-68a5-4c5b-8199-b4239250665e",
+            "sourceColumn": "August Sales",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "September Sales",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "b38dff5d-ad1d-4510-a3c3-d5027249fd5c",
+            "sourceColumn": "September Sales",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "October Sales",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "0c895df5-ca94-481c-b7c0-714a3c32a8de",
+            "sourceColumn": "October Sales",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "November Sales",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "6403846c-0209-4787-88e1-545fe196f342",
+            "sourceColumn": "November Sales",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "December Sales",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "e3f1625e-4a38-4a1c-aec2-a7e6c7d7b946",
+            "sourceColumn": "December Sales",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Retail Sales",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "expression": "view_retaildata_december2023_fixed[January Sales]+view_retaildata_december2023_fixed[February Sales]+view_retaildata_december2023_fixed[March Sales]+view_retaildata_december2023_fixed[April Sales]+view_retaildata_december2023_fixed[May Sales]+view_retaildata_december2023_fixed[June Sales]+view_retaildata_december2023_fixed[August Sales]+view_retaildata_december2023_fixed[September Sales]+view_retaildata_december2023_fixed[October Sales]+view_retaildata_december2023_fixed[November Sales]+view_retaildata_december2023_fixed[December Sales]",
+            "formatString": "#,0",
+            "isDataTypeInferred": true,
+            "lineageTag": "d1652bd6-3ad9-44c2-884e-a79efe1750e0",
+            "summarizeBy": "sum",
+            "type": "calculated"
+          }
+        ],
+        "lineageTag": "609e49d3-2391-4540-80d3-8bd3cc02b1d8",
+        "partitions": [
+          {
+            "name": "view_retaildata_december2023_fixed",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Databases(\"localhost\\SQLEXPRESS\"),",
+                "    db_us_retailsales_2014to2023 = Source{[Name=\"db_us_retailsales_2014to2023\"]}[Data],",
+                "    dbo_view_retaildata_december2023_fixed = db_us_retailsales_2014to2023{[Schema=\"dbo\",Item=\"view_retaildata_december2023_fixed\"]}[Data],",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(dbo_view_retaildata_december2023_fixed,{{\"January\", Int64.Type}, {\"February\", Int64.Type}, {\"March\", Int64.Type}, {\"April\", Int64.Type}, {\"May\", Int64.Type}, {\"June\", Int64.Type}, {\"July\", Int64.Type}, {\"August\", Int64.Type}, {\"September\", Int64.Type}, {\"October\", Int64.Type}, {\"November\", Int64.Type}, {\"December\", Int64.Type}}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Changed Type\",{{\"January\", \"January Sales\"}, {\"February\", \"February Sales\"}, {\"March\", \"March Sales\"}, {\"April\", \"April Sales\"}, {\"May\", \"May Sales\"}, {\"June\", \"June Sales\"}, {\"July\", \"July Sales\"}, {\"August\", \"August Sales\"}, {\"September\", \"September Sales\"}, {\"October\", \"October Sales\"}, {\"November\", \"November Sales\"}, {\"December\", \"December Sales\"}}),",
+                "    #\"Replaced Value\" = Table.ReplaceValue(#\"Renamed Columns\",\"Car\",\"Car Related\",Replacer.ReplaceText,{\"Industry_Group\"}),",
+                "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Replaced Value\",\"Home\",\"Home Products\",Replacer.ReplaceText,{\"Industry_Group\"}),",
+                "    #\"Replaced Value2\" = Table.ReplaceValue(#\"Replaced Value1\",\"Mix\",\"Mixed\",Replacer.ReplaceText,{\"Industry_Group\"}),",
+                "    #\"Replaced Value3\" = Table.ReplaceValue(#\"Replaced Value2\",\"Hobby\",\"Hobbies\",Replacer.ReplaceText,{\"Industry_Group\"})",
+                "in",
+                "    #\"Replaced Value3\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
