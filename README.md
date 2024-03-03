@@ -1,4 +1,4 @@
-# Retail_Sales_US_2023to2014
+# Retail_Sales_US_2014to2023
 Investigate the correlation between US Employment data and retail sales between 2014 and 2023.
 ![image](https://github.com/osoisi/Retail_Sales_US_2023to2014/assets/42849017/6f1c597c-8858-456a-a4ff-5741541e8c18)
 
