@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "powerbi project for US retail sales 2014 to 2023"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f068b31b-7b64-407b-86be-e461bf273914"
+  }
+}

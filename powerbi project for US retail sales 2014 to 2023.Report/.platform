@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "powerbi project for US retail sales 2014 to 2023"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "194fe4ee-7f88-4ce7-b097-32805f3ecb2e"
+  }
+}
