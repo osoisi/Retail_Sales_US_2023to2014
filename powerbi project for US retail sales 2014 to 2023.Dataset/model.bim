@@ -12,7 +12,7 @@
       },
       {
         "name": "PBIDesktopVersion",
-        "value": "2.127.1080.0 (24.03)"
+        "value": "2.128.1380.0 (24.04)"
       },
       {
         "name": "PBI_ProTooling",
@@ -1202,7 +1202,7 @@
             "summarizeBy": "none"
           },
           {
-            "name": "Industry_Group",
+            "name": "Industry Group",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -1211,7 +1211,7 @@
             ],
             "dataType": "string",
             "lineageTag": "cdf7fd04-4613-47f4-81e9-d6812c594f89",
-            "sourceColumn": "Industry_Group",
+            "sourceColumn": "Industry Group",
             "summarizeBy": "none"
           },
           {
@@ -1246,9 +1246,10 @@
                 "    #\"Replaced Value\" = Table.ReplaceValue(dbo_december2023projections,\"Car\",\"Car Related\",Replacer.ReplaceText,{\"Industry_Group\"}),",
                 "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Replaced Value\",\"Home\",\"Home Products\",Replacer.ReplaceText,{\"Industry_Group\"}),",
                 "    #\"Replaced Value2\" = Table.ReplaceValue(#\"Replaced Value1\",\"Mix\",\"Mixed\",Replacer.ReplaceText,{\"Industry_Group\"}),",
-                "    #\"Replaced Value3\" = Table.ReplaceValue(#\"Replaced Value2\",\"Hobby\",\"Hobbies\",Replacer.ReplaceText,{\"Industry_Group\"})",
+                "    #\"Replaced Value3\" = Table.ReplaceValue(#\"Replaced Value2\",\"Hobby\",\"Hobbies\",Replacer.ReplaceText,{\"Industry_Group\"}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Replaced Value3\",{{\"Industry_Group\", \"Industry Group\"}})",
                 "in",
-                "    #\"Replaced Value3\""
+                "    #\"Renamed Columns\""
               ],
               "type": "m"
             }
@@ -1511,6 +1512,14 @@
           }
         ],
         "lineageTag": "609e49d3-2391-4540-80d3-8bd3cc02b1d8",
+        "measures": [
+          {
+            "name": "TotalRetailSales",
+            "expression": "Sum(view_retaildata_december2023_fixed[Total Retail Sales])",
+            "formatString": "0",
+            "lineageTag": "0ca5c37a-1420-4464-a2ae-d853b385b7ce"
+          }
+        ],
         "partitions": [
           {
             "name": "view_retaildata_december2023_fixed",
